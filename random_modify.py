@@ -9,7 +9,7 @@ from numpy.linalg import norm
 from utils import *
 parser = argparse.ArgumentParser()
 parser.add_argument("--iteration", default= 100, type=int)
-parser.add_argument("--modify_edge", default= 100, type=int)
+parser.add_argument("--modify_edge", default= 400, type=int)
 args = parser.parse_args()
 
 edge_dict = {}
@@ -85,3 +85,4 @@ if __name__ == "__main__":
     print(f"label_presever: {label_presever}") 
     #直接random 200條邊來修改的結果，1000個testing中大概是390個左右label preserve
     #直接random 200條邊來修改的結果，200個validation中大概是76個左右label preserve，cosine similarity大概是0.8左右
+    #直接random 400條邊來修改的結果，200個validation中大概是33個左右label preserve，cosine similarity大概是0.6左右
